@@ -1,0 +1,237 @@
+  * {
+      box-sizing: border-box;
+  }
+
+  body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #1f2937;
+  }
+
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px;
+  }
+
+  .header {
+      background: #1f2937;
+      color: white;
+      padding: 18px 22px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .header h1 {
+      margin: 0;
+      font-size: 20px;
+  }
+
+  .header span {
+      font-size: 12px;
+      color: #d1d5db;
+  }
+
+  .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 20px;
+  }
+
+  .summary-card {
+      background: white;
+      border: 1px solid #cbd5e1;
+      padding: 18px;
+      min-height: 105px;
+  }
+
+  .summary-title {
+      color: #6b7280;
+      font-size: 12px;
+      margin-bottom: 12px;
+  }
+
+  .summary-value {
+      font-size: 20px;
+      font-weight: bold;
+  }
+
+  .summary-card.blue {
+      border-left: 4px solid #2563eb;
+  }
+
+  .summary-card.orange {
+      border-left: 4px solid #ea580c;
+  }
+
+  .summary-card.green {
+      border-left: 4px solid #16a34a;
+  }
+
+  .main-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+  }
+
+  .panel {
+      background: white;
+      border: 1px solid #cbd5e1;
+      padding: 18px;
+  }
+
+  .panel-title {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 14px;
+  }
+
+  table {
+      width: 100%;
+      border-collapse: collapse;
+  }
+
+  th {
+      background: #e5e7eb;
+      text-align: left;
+      font-size: 11px;
+      padding: 8px;
+      color: #374151;
+  }
+
+  td {
+      padding: 9px 8px;
+      border-bottom: 1px solid #e5e7eb;
+      font-size: 12px;
+  }
+
+  .churn-panel {
+      border: 1px solid #ef4444;
+      background: #fff7f7;
+  }
+
+  .churn-title {
+      color: #b91c1c;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 12px;
+  }
+
+  .churn-item {
+      padding: 7px 0;
+      font-size: 12px;
+      border-bottom: 1px solid #fecaca;
+  }
+
+  .churn-item:last-child {
+      border-bottom: none;
+  }
+
+  .trend-panel {
+      min-height: 280px;
+  }
+
+  .chart {
+      height: 220px;
+      position: relative;
+      border-left: 1px solid #cbd5e1;
+      border-bottom: 1px solid #cbd5e1;
+      margin-top: 10px;
+      overflow: hidden;
+  }
+
+  .chart-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+          linear-gradient(to right,
+              transparent 24.8%,
+              #e5e7eb 25%,
+              transparent 25.2%,
+              transparent 49.8%,
+              #e5e7eb 50%,
+              transparent 50.2%,
+              transparent 74.8%,
+              #e5e7eb 75%,
+              transparent 75.2%),
+          linear-gradient(to bottom,
+              transparent 24.8%,
+              #e5e7eb 25%,
+              transparent 25.2%,
+              transparent 49.8%,
+              #e5e7eb 50%,
+              transparent 50.2%,
+              transparent 74.8%,
+              #e5e7eb 75%,
+              transparent 75.2%);
+  }
+
+  .chart svg {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 2;
+  }
+
+  .chart-label {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      font-size: 10px;
+      color: #9ca3af;
+      z-index: 3;
+  }
+
+  .system-panel {
+      background: #eff6ff;
+      border: 1px solid #60a5fa;
+  }
+
+  .system-title {
+      color: #0369a1;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 12px;
+  }
+
+  .system-item {
+      font-size: 12px;
+      margin-bottom: 9px;
+  }
+
+  .status-ok {
+      color: #15803d;
+      font-weight: bold;
+  }
+
+  .empty {
+      color: #6b7280;
+      padding: 15px 0;
+      font-size: 12px;
+  }
+
+  .error {
+      display: none;
+      background: #fee2e2;
+      border: 1px solid #ef4444;
+      color: #991b1b;
+      padding: 12px;
+      margin-bottom: 15px;
+  }
+
+  @media (max-width: 850px) {
+
+      .summary-grid,
+      .main-grid {
+          grid-template-columns: 1fr;
+      }
+
+      .container {
+          padding: 15px;
+      }
+  }
